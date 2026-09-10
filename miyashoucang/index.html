@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIYA收藏请牢记此区域-精品收藏导航与资源整理指南</title>
+    <meta name="description" content="MIYA收藏请牢记此区域，为您提供实用的收藏分类、资源整理方法与高效导航建议，帮助您管理网络书签、学习资料与兴趣内容，打造个人专属收藏体系。">
+    <meta name="keywords" content="MIYA收藏,收藏夹管理,资源整理,书签导航,收藏分类,网络收藏夹,收藏夹整理,资源收藏指南">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #f8f6f3;
+            color: #2d2a26;
+            line-height: 1.7;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== Header ===== */
+        .site-header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: #c9a063;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            font-size: 18px;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #3a3530;
+            letter-spacing: 0.5px;
+        }
+        .logo-text span {
+            color: #a8814c;
+        }
+        .header-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 6px;
+        }
+        .header-nav a {
+            display: block;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.2s;
+        }
+        .header-nav a:hover {
+            background: #f0ebe3;
+            color: #3a3530;
+        }
+        .header-nav a.active {
+            background: #c9a063;
+            color: #fff;
+        }
+        .header-action {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f5f1eb;
+            border-radius: 30px;
+            padding: 6px 16px;
+            width: 230px;
+        }
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 14px;
+            width: 100%;
+            color: #3a3530;
+        }
+        .search-box svg {
+            width: 16px;
+            height: 16px;
+            fill: #aaa;
+            margin-right: 8px;
+        }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: linear-gradient(135deg, #f0e7db 0%, #faf6f0 50%, #e6d9c8 100%);
+            padding: 70px 0 80px;
+            border-bottom: 1px solid #e8dfd3;
+        }
+        .hero-content {
+            max-width: 800px;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            color: #2b2620;
+            margin-bottom: 18px;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: #b8864e;
+            border-bottom: 3px solid #c9a063;
+            padding-bottom: 2px;
+        }
+        .hero p {
+            font-size: 17px;
+            color: #5a534a;
+            max-width: 640px;
+            margin-bottom: 28px;
+            line-height: 1.8;
+        }
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid #dccdb8;
+            color: #6b5a44;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+
+        /* ===== 通知条 ===== */
+        .notice-bar {
+            background: #fff;
+            border-bottom: 1px solid #eee5da;
+            padding: 12px 0;
+        }
+        .notice-inner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+        }
+        .notice-label {
+            background: #c9a063;
+            color: #fff;
+            padding: 2px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+        .notice-text {
+            color: #5a534a;
+        }
+        .notice-text strong {
+            color: #b8864e;
+        }
+
+        /* ===== 特点卡片 ===== */
+        .features {
+            padding: 60px 0 30px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #2b2620;
+            margin-bottom: 10px;
+        }
+        .section-title p {
+            color: #7a7267;
+            font-size: 15px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .feature-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px 26px;
+            border: 1px solid #eee5da;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+        .feature-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: #f0e7db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 18px;
+            color: #a8814c;
+        }
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #2b2620;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #6b645b;
+            line-height: 1.7;
+        }
+
+        /* ===== 收藏分类区 ===== */
+        .category-section {
+            padding: 50px 0;
+        }
+        .cat-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 36px;
+        }
+        .cat-tab {
+            padding: 8px 22px;
+            border-radius: 30px;
+            background: #fff;
+            border: 1px solid #ddd5c9;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5a534a;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .cat-tab:hover {
+            border-color: #c9a063;
+            color: #a8814c;
+        }
+        .cat-tab.active {
+            background: #c9a063;
+            color: #fff;
+            border-color: #c9a063;
+        }
+        .cat-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .cat-item {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 20px;
+            border: 1px solid #eee5da;
+            transition: all 0.2s;
+        }
+        .cat-item:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            border-color: #d9c9b2;
+        }
+        .cat-item .cat-name {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .cat-item .cat-name .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .cat-item p {
+            font-size: 13px;
+            color: #7a7267;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .cat-item .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .cat-item .tag {
+            background: #f5f1eb;
+            color: #6b5a44;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        /* ===== 整理技巧 ===== */
+        .tips-section {
+            background: #fff;
+            padding: 60px 0;
+            border-top: 1px solid #eee5da;
+            border-bottom: 1px solid #eee5da;
+        }
+        .tips-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        .tips-content h2 {
+            font-size: 30px;
+            margin-bottom: 18px;
+            color: #2b2620;
+        }
+        .tips-content p {
+            color: #6b645b;
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+        .tips-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+        .tips-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #e8dfd3;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            font-size: 15px;
+            color: #4a443e;
+        }
+        .tips-list li:last-child {
+            border-bottom: none;
+        }
+        .tips-num {
+            background: #c9a063;
+            color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        .tips-visual {
+            background: linear-gradient(135deg, #f0e7db 0%, #faf6f0 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #e8dfd3;
+        }
+        .tips-visual .big-icon {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+        .tips-visual h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .tips-visual p {
+            font-size: 14px;
+            color: #6b645b;
+        }
+
+        /* ===== 热门收藏 ===== */
+        .hot-section {
+            padding: 60px 0;
+        }
+        .hot-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .hot-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #eee5da;
+            transition: all 0.2s;
+        }
+        .hot-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+        .hot-thumb {
+            height: 140px;
+            background: linear-gradient(135deg, #e8dac8, #d9c4aa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #fff;
+            position: relative;
+        }
+        .hot-thumb .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            backdrop-filter: blur(4px);
+        }
+        .hot-body {
+            padding: 20px 20px 24px;
+        }
+        .hot-body h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #2b2620;
+        }
+        .hot-body p {
+            font-size: 13px;
+            color: #7a7267;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .hot-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: #999;
+        }
+        .hot-meta .stars {
+            color: #d4a853;
+            letter-spacing: 2px;
+        }
+
+        /* ===== 使用场景 ===== */
+        .scenario-section {
+            background: #fff;
+            padding: 60px 0;
+            border-top: 1px solid #eee5da;
+        }
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .scenario-item {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 16px;
+            transition: background 0.2s;
+        }
+        .scenario-item:hover {
+            background: #faf6f0;
+        }
+        .scenario-icon {
+            font-size: 42px;
+            margin-bottom: 16px;
+        }
+        .scenario-item h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .scenario-item p {
+            font-size: 14px;
+            color: #6b645b;
+            text-align: left;
+            line-height: 1.7;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-section {
+            padding: 60px 0;
+        }
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 14px;
+            border: 1px solid #eee5da;
+            overflow: hidden;
+        }
+        .faq-q {
+            padding: 18px 24px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #2b2620;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            border: none;
+            width: 100%;
+            text-align: left;
+            transition: background 0.2s;
+        }
+        .faq-q:hover {
+            background: #faf6f0;
+        }
+        .faq-q .arrow {
+            transition: transform 0.3s;
+            color: #a8814c;
+        }
+        .faq-q.open .arrow {
+            transform: rotate(180deg);
+        }
+        .faq-a {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: #6b645b;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        .faq-a.open {
+            padding: 0 24px 20px;
+            max-height: 300px;
+        }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #2b2620, #4a3f35);
+            padding: 60px 0;
+            color: #fff;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 30px;
+            margin-bottom: 14px;
+        }
+        .cta-section p {
+            font-size: 16px;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+        .cta-btn {
+            background: #c9a063;
+            color: #fff;
+            padding: 12px 36px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(201, 160, 99, 0.4);
+        }
+
+        /* ===== Footer ===== */
+        .site-footer {
+            background: #1f1c18;
+            padding: 40px 0 30px;
+            color: #8a8378;
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col h4 {
+            color: #d9cdbd;
+            font-size: 16px;
+            margin-bottom: 14px;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .footer-col a:hover {
+            color: #c9a063;
+        }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 992px) {
+            .feature-grid,
+            .hot-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .cat-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .tips-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .scenario-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-nav {
+                display: none;
+            }
+            .search-box {
+                width: 160px;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .feature-grid,
+            .hot-grid,
+            .cat-grid {
+                grid-template-columns: 1fr;
+            }
+            .header-action .search-box {
+                display: none;
+            }
+            .logo-text {
+                font-size: 17px;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .hero {
+                padding: 50px 0 60px;
+            }
+            .section-title h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">M</div>
+                <div class="logo-text">MIYA<span>收藏</span></div>
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">收藏分类</a></li>
+                    <li><a href="#">整理技巧</a></li>
+                    <li><a href="#">热门推荐</a></li>
+                    <li><a href="#">帮助中心</a></li>
+                </ul>
+            </nav>
+            <div class="header-action">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    <input type="text" placeholder="搜索收藏内容...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== 通知条 ===== -->
+    <div class="notice-bar">
+        <div class="container notice-inner">
+            <span class="notice-label">重要提示</span>
+            <span class="notice-text"><strong>MIYA收藏请牢记此区域</strong>，建议将本页加入浏览器书签，方便随时查阅收藏指南与资源导航。</span>
+        </div>
+    </div>
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>MIYA收藏<em>请牢记此区域</em><br>打造你的专属收藏体系</h1>
+                <p>无论是网络书签、学习资料、灵感素材还是实用工具，MIYA收藏提供一套清晰、高效、可持久使用的收藏分类方法与整理思路，帮助你告别收藏夹混乱，让每一份收藏都触手可及。</p>
+                <div class="hero-badges">
+                    <span class="hero-badge">📁 科学分类</span>
+                    <span class="hero-badge">🔖 高效管理</span>
+                    <span class="hero-badge">💡 实用技巧</span>
+                    <span class="hero-badge">🔄 持续更新</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 特点卡片 ===== -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>为什么需要规范的收藏区域</h2>
+                <p>收藏不是简单的保存，而是一种知识管理方式</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🗂️</div>
+                    <h3>分类清晰化</h3>
+                    <p>通过合理的分类体系，将不同类型的收藏内容归入对应区域，避免混杂存放带来的查找困难，让收藏结构一目了然。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>快速定位</h3>
+                    <p>记住收藏区域的关键位置和命名规则，配合浏览器书签或收藏夹工具，能够在几秒内找到需要的资源，提升效率。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>知识沉淀</h3>
+                    <p>定期整理和回顾收藏内容，将零散的信息转化为系统化的知识资产，让收藏真正为你所用，而不是沉睡的链接。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 收藏分类 ===== -->
+    <section class="category-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>收藏分类参考</h2>
+                <p>根据内容类型建立合适的收藏区域</p>
+            </div>
+            <div class="cat-tabs">
+                <span class="cat-tab active">全部</span>
+                <span class="cat-tab">学习</span>
+                <span class="cat-tab">工作</span>
+                <span class="cat-tab">生活</span>
+                <span class="cat-tab">兴趣</span>
+            </div>
+            <div class="cat-grid">
+                <div class="cat-item">
+                    <div class="cat-name"><span class="dot" style="background:#c9a063;"></span>学习资料</div>
+                    <p>课程笔记、教程文章、电子书、知识地图等学习相关资源。</p>
+                    <div class="tag-list">
+                        <span class="tag">教程</span>
+                        <span class="tag">笔记</span>
+                        <span class="tag">文档</span>
+                    </div>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-name"><span class="dot" style="background:#7a9e7e;"></span>设计灵感</div>
+                    <p>UI参考、配色方案、优秀网站、设计素材与案例收集。</p>
+                    <div class="tag-list">
+                        <span class="tag">UI</span>
+                        <span class="tag">配色</span>
+                        <span class="tag">素材</span>
+                    </div>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-name"><span class="dot" style="background:#7b8fa1;"></span>工具导航</div>
+                    <p>在线工具、效率软件、浏览器插件等实用工具集合。</p>
+                    <div class="tag-list">
+                        <span class="tag">效率</span>
+                        <span class="tag">插件</span>
+                        <span class="tag">在线</span>
+                    </div>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-name"><span class="dot" style="background:#b58a7a;"></span>阅读书单</div>
+                    <p>想读的书、优质文章、深度好文与阅读笔记整理。</p>
+                    <div class="tag-list">
+                        <span class="tag">书籍</span>
+                        <span class="tag">文章</span>
+                        <span class="tag">深度</span>
+                    </div>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-name"><span class="dot" style="background:#a3a07e;"></span>影音资源</div>
+                    <p>电影、纪录片、音乐、播客等影音内容推荐与收藏。</p>
+                    <div class="tag-list">
+                        <span class="tag">电影</span>
+                        <span class="tag">音乐</span>
+                        <span class="tag">播客</span>
+                    </div>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-name"><span class="dot" style="background:#9a8fb0;"></span>代码片段</div>
+                    <p>常用代码段、开发文档、技术博客与编程资源收藏。</p>
+                    <div class="tag-list">
+                        <span class="tag">前端</span>
+                        <span class="tag">后端</span>
+                        <span class="tag">算法</span>
+                    </div>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-name"><span class="dot" style="background:#d4a85c;"></span>生活备忘</div>
+                    <p>购物清单、旅行计划、健康记录等生活实用信息。</p>
+                    <div class="tag-list">
+                        <span class="tag">清单</span>
+                        <span class="tag">旅行</span>
+                        <span class="tag">健康</span>
+                    </div>
+                </div>
+                <div class="cat-item">
+                    <div class="cat-name"><span class="dot" style="background:#6f9e9e;"></span>灵感碎片</div>
+                    <p>随时收集的灵感想法、金句摘录、创意随笔等内容。</p>
+                    <div class="tag-list">
+                        <span class="tag">灵感</span>
+                        <span class="tag">摘录</span>
+                        <span class="tag">创意</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 整理技巧 ===== -->
+    <section class="tips-section">
+        <div class="container tips-layout">
+            <div class="tips-content">
+                <h2>收藏整理的实用方法</h2>
+                <p>建立一套适合自己的收藏管理体系并不复杂，关键在于遵循几个简单原则，并长期坚持执行。以下方法可以帮助你从零开始构建收藏区域。</p>
+                <ul class="tips-list">
+                    <li>
+                        <span class="tips-num">1</span>
+                        <div><strong>明确收藏目的</strong> — 每次收藏前问自己：这个内容未来会在什么场景使用？据此决定放入哪个区域。</div>
+                    </li>
+                    <li>
+                        <span class="tips-num">2</span>
+                        <div><strong>采用两级分类</strong> — 建议大类不超过8个，每个大类下再设小类，避免层级过深导致收藏后难以找到。</div>
+                    </li>
+                    <li>
+                        <span class="tips-num">3</span>
+                        <div><strong>统一命名规则</strong> — 收藏条目使用「内容主题+来源+日期」的格式命名，便于后续检索和筛选。</div>
+                    </li>
+                    <li>
+                        <span class="tips-num">4</span>
+                        <div><strong>定期清理归档</strong> — 每月花15分钟检查收藏夹，删除失效链接，将已完成的资料移至归档区域。</div>
+                    </li>
+                    <li>
+                        <span class="tips-num">5</span>
+                        <div><strong>善用标签功能</strong> — 为收藏添加多个标签，弥补单一分类的局限，让内容可以被多维度检索。</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tips-visual">
+                <div class="big-icon">🔖</div>
+                <h3>收藏即整理</h3>
+                <p>好的收藏习惯，是在保存的那一刻就完成整理。不要让收藏夹变成信息的垃圾场，而是让它成为你的第二大脑。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 热门收藏 ===== -->
+    <section class="hot-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>热门收藏区域推荐</h2>
+                <p>用户最常收藏的几类内容，供你参考</p>
+            </div>
+            <div class="hot-grid">
+                <div class="hot-card">
+                    <div class="hot-thumb" style="background: linear-gradient(135deg, #d4c5a9, #b8a88a);">
+                        <span>📚</span>
+                        <span class="badge">TOP 1</span>
+                    </div>
+                    <div class="hot-body">
+                        <h3>学习成长类收藏</h3>
+                        <p>包含在线课程、技能教程、知识文章等，是用户最常保存的内容类型，适合建立系统化的学习路径。</p>
+                        <div class="hot-meta">
+                            <span>⭐ 4.8</span>
+                            <span>热度 98%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hot-card">
+                    <div class="hot-thumb" style="background: linear-gradient(135deg, #a8b8c8, #8a9eb0);">
+                        <span>💻</span>
+                        <span class="badge">TOP 2</span>
+                    </div>
+                    <div class="hot-body">
+                        <h3>效率工具收藏</h3>
+                        <p>各类办公软件、在线工具、浏览器插件的集合区域，帮助用户提升日常工作效率，减少重复劳动。</p>
+                        <div class="hot-meta">
+                            <span>⭐ 4.7</span>
+                            <span>热度 92%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hot-card">
+                    <div class="hot-thumb" style="background: linear-gradient(135deg, #c8a8b0, #b08a96);">
+                        <span>🎨</span>
+                        <span class="badge">TOP 3</span>
+                    </div>
+                    <div class="hot-body">
+                        <h3>创意灵感收藏</h3>
+                        <p>设计作品、文案案例、创意点子等，是创意工作者最重视的收藏区域，需要随时记录和回看。</p>
+                        <div class="hot-meta">
+                            <span>⭐ 4.6</span>
+                            <span>热度 87%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== 使用场景 ===== -->
+    <section class="scenario-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>收藏区域的使用场景</h2>
+                <p>不同人群都能找到适合自己的收藏方式</p>
+            </div>
+            <div class="scenario-grid">
+                <div class="scenario-item">
+                    <div class="scenario-icon">🎓</div>
+                    <h3>学生群体</h3>
+                    <p>整理课程笔记、考试资料、论文参考文献。按学期或科目建立收藏区域，复习时快速定位重点内容，提高学习效率。</p>
+                </div>
+                <div class="scenario-item">
+                    <div class="scenario-icon">💼</div>
+                    <h3>职场人士</h3>
+                    <p>管理工作文档、行业报告、竞品资料。将收藏区域与项目进度结合，让工作资料随取随用，提升专业表现。</p>
+                </div>
+                <div class="scenario-item">
+                    <div class="scenario-icon">🎯</div>
+                    <h3>兴趣爱好者</h3>
+                    <p>收集摄影作品、旅行攻略、美食教程等。按兴趣主题建立收藏区域，打造属于自己的兴趣知识库。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题</h2>
+                <p>关于收藏整理的疑问解答</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">如何建立适合自己的收藏分类体系？<span class="arrow">▼</span></button>
+                    <div class="faq-a">建议从自身的实际需求出发，先列出你经常收藏的内容类型，再归纳为3-8个大类。分类名称要通俗易懂，避免使用过于抽象或专业的词汇。使用一段时间后，根据实际使用情况灵活调整分类结构。</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">收藏的内容太多，整理起来没有头绪怎么办？<span class="arrow">▼</span></button>
+                    <div class="faq-a">可以采用「逐步整理」的策略，每次只整理一个时间段的收藏，比如每周整理一次本周新增内容。先删除明显无用的链接，再为保留的内容添加标签和分类，不需要一次性完成所有整理。</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">如何确保收藏的内容能够被快速找到？<span class="arrow">▼</span></button>
+                    <div class="faq-a">关键在于「命名规范」和「标签体系」。为收藏条目设置包含关键词的标题，并添加2-3个不同维度的标签。这样无论通过分类浏览还是关键词搜索，都能快速定位目标内容。</div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">收藏夹和书签栏有什么区别？如何配合使用？<span class="arrow">▼</span></button>
+                    <div class="faq-a">浏览器书签栏适合放高频使用的少量链接，而收藏夹可以存放大量中长期保留的内容。建议将书签栏视为「快捷入口」，收藏夹视为「资源仓库」，两者配合使用效率更高。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>开始整理你的收藏区域</h2>
+            <p>现在就检查你的收藏夹，按照上述方法建立分类体系，让每一份收藏都物有所值。</p>
+            <a href="#" class="cta-btn">立即开始整理</a>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <h4>MIYA收藏</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>收藏指南</h4>
+                    <ul>
+                        <li><a href="#">分类方法</a></li>
+                        <li><a href="#">整理技巧</a></li>
+                        <li><a href="#">工具推荐</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>资源导航</h4>
+                    <ul>
+                        <li><a href="#">学习资源</a></li>
+                        <li><a href="#">设计灵感</a></li>
+                        <li><a href="#">效率工具</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助支持</h4>
+                    <ul>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">使用教程</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 MIYA收藏 - 收藏请牢记此区域，让收藏更有价值</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ 交互
+        document.querySelectorAll('.faq-q').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.parentElement;
+                var answer = item.querySelector('.faq-a');
+                var isOpen = answer.classList.contains('open');
+                // 关闭所有
+                document.querySelectorAll('.faq-a').forEach(function(a) {
+                    a.classList.remove('open');
+                });
+                document.querySelectorAll('.faq-q').forEach(function(b) {
+                    b.classList.remove('open');
+                });
+                // 打开当前
+                if (!isOpen) {
+                    answer.classList.add('open');
+                    btn.classList.add('open');
+                }
+            });
+        });
+
+        // 分类标签切换（简单模拟）
+        document.querySelectorAll('.cat-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.cat-tab').forEach(function(t) {
+                    t.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+      </html>
