@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花都武警医院-便民就医服务与健康科普信息平台</title>
+    <meta name="description" content="花都武警医院相关便民就医指引、科室介绍、健康科普与常见问题解答。本站提供客观、严谨的医疗信息服务，帮助您了解就诊流程与注意事项。">
+    <meta name="keywords" content="花都武警医院,武警医院,花都就医,医院科室,健康科普,就诊指南">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        /* 全局重置与基础 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f5f7fb;
+            color: #1f2a3d;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部信息条 */
+        .topbar {
+            background-color: #1b3a5c;
+            color: #d9e2ef;
+            font-size: 14px;
+            padding: 8px 0;
+        }
+        .topbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .topbar a {
+            color: #f0f5fa;
+            margin-left: 15px;
+        }
+        .topbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* 页眉 */
+        .site-header {
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo-area h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1b3a5c;
+            letter-spacing: 1px;
+        }
+        .logo-area p {
+            font-size: 13px;
+            color: #6b7a8f;
+            margin-top: 2px;
+        }
+        .main-nav ul {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        .main-nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: #2c3e50;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+        .main-nav a:hover,
+        .main-nav a.active {
+            color: #0d6efd;
+            border-bottom-color: #0d6efd;
+        }
+
+        /* 首屏 Hero 区域 - 医院特色 */
+        .hero {
+            background: linear-gradient(145deg, #eef4fb 0%, #dbe9f7 100%);
+            border-radius: 0 0 30px 30px;
+            padding: 45px 0 55px;
+            margin-bottom: 35px;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .hero-text h2 {
+            font-size: 34px;
+            font-weight: 700;
+            color: #14324d;
+            line-height: 1.3;
+            margin-bottom: 18px;
+        }
+        .hero-text h2 span {
+            color: #0d6efd;
+        }
+        .hero-text p {
+            font-size: 17px;
+            color: #2c4b66;
+            margin-bottom: 20px;
+            max-width: 550px;
+        }
+        .hero-badge {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 12px;
+        }
+        .hero-badge span {
+            background: #ffffffcc;
+            border: 1px solid #b6cde3;
+            padding: 5px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: #1b3a5c;
+            font-weight: 500;
+            backdrop-filter: blur(2px);
+        }
+        .hero-info-card {
+            background: #ffffff;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 40, 80, 0.08);
+            padding: 28px 24px;
+            border: 1px solid #e2eaf2;
+        }
+        .hero-info-card h3 {
+            font-size: 20px;
+            color: #1b3a5c;
+            margin-bottom: 15px;
+            border-left: 4px solid #0d6efd;
+            padding-left: 12px;
+        }
+        .info-list-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 14px;
+            font-size: 15px;
+        }
+        .info-list-item .icon {
+            background: #e9f0f9;
+            border-radius: 8px;
+            width: 30px;
+            height: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 18px;
+            color: #0d6efd;
+            flex-shrink: 0;
+        }
+        .info-list-item strong {
+            display: block;
+            font-weight: 600;
+            color: #1b3a5c;
+        }
+        .info-list-item small {
+            color: #5e6f82;
+            font-size: 14px;
+        }
+
+        /* 通用栏目标题 */
+        .section-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1b3a5c;
+            margin-bottom: 8px;
+        }
+        .section-sub {
+            color: #6b7a8f;
+            font-size: 15px;
+            margin-bottom: 28px;
+        }
+
+        /* 科室分类卡片区 */
+        .dept-section {
+            margin: 45px 0;
+        }
+        .dept-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .dept-card {
+            background: white;
+            border-radius: 14px;
+            padding: 24px 18px;
+            border: 1px solid #e6edf5;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .dept-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 30, 60, 0.08);
+        }
+        .dept-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .dept-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #1b3a5c;
+        }
+        .dept-card p {
+            font-size: 14px;
+            color: #4d6077;
+            margin-bottom: 12px;
+        }
+        .dept-tag {
+            background: #f0f6fe;
+            color: #0d6efd;
+            font-size: 13px;
+            border-radius: 20px;
+            padding: 2px 12px;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        /* 就诊流程 */
+        .flow-section {
+            background: white;
+            border-radius: 24px;
+            padding: 40px 30px;
+            margin: 45px 0;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e9f0f7;
+        }
+        .flow-steps {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .flow-item {
+            flex: 1;
+            min-width: 160px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            background: #f8fbfe;
+            border-radius: 14px;
+            padding: 18px 16px;
+        }
+        .step-num {
+            background: #0d6efd;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 14px;
+        }
+        .flow-item h4 {
+            font-size: 16px;
+            margin-bottom: 6px;
+            color: #1b3a5c;
+        }
+        .flow-item p {
+            font-size: 14px;
+            color: #4e6279;
+        }
+
+        /* 健康科普 */
+        .health-section {
+            margin: 45px 0;
+        }
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .article-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #e6edf5;
+            transition: box-shadow 0.2s;
+        }
+        .article-card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+        }
+        .article-thumb {
+            background: #d9e7f5;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: #1b3a5c;
+        }
+        .article-body {
+            padding: 18px 18px 22px;
+        }
+        .article-body h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+            color: #1b3a5c;
+        }
+        .article-body p {
+            font-size: 14px;
+            color: #566c84;
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .article-meta {
+            font-size: 13px;
+            color: #8a99ad;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* 便民服务与注意事项 */
+        .notice-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 26px;
+            margin: 45px 0;
+        }
+        .notice-card {
+            background: white;
+            border-radius: 16px;
+            padding: 26px;
+            border: 1px solid #e6edf5;
+        }
+        .notice-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #0d6efd;
+            padding-left: 12px;
+            color: #1b3a5c;
+        }
+        .notice-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #e2eaf2;
+            font-size: 15px;
+            color: #33475b;
+            display: flex;
+            gap: 8px;
+        }
+        .notice-card ul li::before {
+            content: "•";
+            color: #0d6efd;
+            font-weight: bold;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 36px 30px;
+            margin: 45px 0;
+            border: 1px solid #e9f0f7;
+        }
+        .faq-list details {
+            border-bottom: 1px solid #eef3f9;
+            padding: 16px 0;
+        }
+        .faq-list summary {
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            color: #1b3a5c;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-list summary::after {
+            content: "+";
+            font-size: 24px;
+            color: #0d6efd;
+            margin-left: 10px;
+        }
+        .faq-list details[open] summary::after {
+            content: "–";
+        }
+        .faq-list p {
+            margin-top: 12px;
+            color: #33475b;
+            font-size: 15px;
+            padding-left: 10px;
+            border-left: 2px solid #dbe4ed;
+        }
+
+        /* 页脚 */
+        .site-footer {
+            background: #12263a;
+            color: #c0d1e2;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        .footer-grid h4 {
+            color: #ffffff;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        .footer-grid p, .footer-grid li {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .footer-grid li a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        .copyright {
+            border-top: 1px solid #2c4056;
+            padding-top: 18px;
+            font-size: 14px;
+            text-align: center;
+            color: #8ea5bb;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .dept-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .article-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .notice-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+            .main-nav ul {
+                gap: 16px;
+            }
+            .dept-grid {
+                grid-template-columns: 1fr;
+            }
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+            .flow-steps {
+                flex-direction: column;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .topbar .container {
+                flex-direction: column;
+                gap: 6px;
+                justify-content: center;
+                text-align: center;
+            }
+            .section-title {
+                font-size: 22px;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+            .hero-text h2 {
+                font-size: 26px;
+            }
+            .site-header {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- 顶部信息 -->
+<div class="topbar">
+    <div class="container">
+        <span>便民就医服务信息平台 · 仅供参考</span>
+        <span><a href="#">预约挂号</a> <a href="#">交通路线</a> <a href="#">联系电话</a></span>
+    </div>
+</div>
+
+<!-- 页眉 -->
+<header class="site-header">
+    <div class="container header-inner">
+        <div class="logo-area">
+            <h1>花都武警医院</h1>
+            <p>便民就医 · 健康科普 · 就诊指引</p>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">医院概况</a></li>
+                <li><a href="#">科室导航</a></li>
+                <li><a href="#">就诊指南</a></li>
+                <li><a href="#">健康科普</a></li>
+                <li><a href="#">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- 首屏 Hero 区域 -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text">
+                <h2>花都武警医院 <span>就医服务指引</span></h2>
+                <p>本平台专注于提供花都武警医院的便民就医信息、科室介绍、就诊流程与健康知识科普，旨在帮助您更顺畅地完成就医准备，合理规划就诊安排。</p>
+                <div class="hero-badge">
+                    <span>🏥 综合科室</span>
+                    <span>📋 就诊流程</span>
+                    <span>🩺 健康科普</span>
+                    <span>📍 交通指引</span>
+                </div>
+            </div>
+            <div class="hero-info-card">
+                <h3>快速就诊信息</h3>
+                <div class="info-list-item">
+                    <span class="icon">🕒</span>
+                    <div><strong>门诊时间</strong><small>周一至周日 上午8:00-12:00，下午13:30-17:00（以院方实际公告为准）</small></div>
+                </div>
+                <div class="info-list-item">
+                    <span class="icon">📞</span>
+                    <div><strong>咨询电话</strong><small>建议通过官方渠道获取最新联系方式</small></div>
+                </div>
+                <div class="info-list-item">
+                    <span class="icon">📍</span>
+                    <div><strong>医院地址</strong><small>广州市花都区（具体位置请查询导航或医院官网）</small></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- 科室导航区 -->
+        <section class="dept-section">
+            <h2 class="section-title">重点科室导航</h2>
+            <p class="section-sub">了解科室分布，有助于快速选择对症科室就诊</p>
+            <div class="dept-grid">
+                <div class="dept-card">
+                    <div class="dept-icon">🫀</div>
+                    <h3>心血管内科</h3>
+                    <p>高血压、冠心病、心律失常等常见心血管疾病的诊疗与健康管理。</p>
+                    <span class="dept-tag">常见病门诊</span>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon">🦴</div>
+                    <h3>骨科</h3>
+                    <p>创伤骨折、关节疾病、颈肩腰腿痛等骨科相关诊疗与康复指导。</p>
+                    <span class="dept-tag">特色专科</span>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon">🤰</div>
+                    <h3>妇产科</h3>
+                    <p>围产期保健、妇科常见疾病诊治以及孕产妇健康咨询服务。</p>
+                    <span class="dept-tag">孕产服务</span>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon">👶</div>
+                    <h3>儿科</h3>
+                    <p>小儿呼吸道感染、消化系统疾病及儿童保健等。</p>
+                    <span class="dept-tag">儿童门诊</span>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon">🧠</div>
+                    <h3>神经内科</h3>
+                    <p>头痛、眩晕、脑血管疾病、癫痫及神经系统常见病症。</p>
+                    <span class="dept-tag">综合科室</span>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon">🩻</div>
+                    <h3>医学影像科</h3>
+                    <p>DR、CT、核磁共振等影像检查服务，为临床诊断提供支持。</p>
+                    <span class="dept-tag">辅助检查</span>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon">🔬</div>
+                    <h3>检验科</h3>
+                    <p>血常规、尿常规、生化免疫等检验项目，方便快捷。</p>
+                    <span class="dept-tag">常规检验</span>
+                </div>
+                <div class="dept-card">
+                    <div class="dept-icon">💊</div>
+                    <h3>药剂科</h3>
+                    <p>处方药调配、用药咨询与合理用药指导服务。</p>
+                    <span class="dept-tag">药事服务</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 就诊流程 -->
+        <section class="flow-section">
+            <h2 class="section-title">就诊流程指引</h2>
+            <p class="section-sub">初次就诊不必担心，按以下步骤逐步完成即可</p>
+            <div class="flow-steps">
+                <div class="flow-item">
+                    <span class="step-num">1</span>
+                    <div><h4>预约挂号</h4><p>通过官方微信公众号、电话或现场自助机挂号，建议提前预约。</p></div>
+                </div>
+                <div class="flow-item">
+                    <span class="step-num">2</span>
+                    <div><h4>报到候诊</h4><p>携带身份证/医保卡至相应科室分诊台报到，等待叫号。</p></div>
+                </div>
+                <div class="flow-item">
+                    <span class="step-num">3</span>
+                    <div><h4>医生问诊</h4><p>向医生详细描述病情，配合检查，开具处方或检查单。</p></div>
+                </div>
+                <div class="flow-item">
+                    <span class="step-num">4</span>
+                    <div><h4>缴费检查</h4><p>在收费窗口或自助机缴费，按指引前往药房取药或检查。</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 健康科普与资讯 -->
+        <section class="health-section">
+            <h2 class="section-title">健康科普与最新资讯</h2>
+            <p class="section-sub">传递科学健康知识，助力日常疾病预防</p>
+            <div class="article-grid">
+                <article class="article-card">
+                    <div class="article-thumb">🏥</div>
+                    <div class="article-body">
+                        <h3>体检报告中的常见指标解读</h3>
+                        <p>血常规、肝功能、血脂等指标升高或降低代表什么？本文带您初步了解。</p>
+                        <div class="article-meta"><span>健康科普</span><span>阅读 5 分钟</span></div>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-thumb">💧</div>
+                    <div class="article-body">
+                        <h3>高温天气如何预防中暑</h3>
+                        <p>及时补水、避免高温时段外出、了解中暑早期症状，做好个人防护。</p>
+                        <div class="article-meta"><span>季节保健</span><span>阅读 4 分钟</span></div>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-thumb">🍎</div>
+                    <div class="article-body">
+                        <h3>糖尿病患者的日常饮食建议</h3>
+                        <p>控制总热量摄入，选择低升糖指数食物，规律进餐。</p>
+                        <div class="article-meta"><span>慢病管理</span><span>阅读 6 分钟</span></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 便民信息与注意事项 -->
+        <section class="notice-section">
+            <div class="notice-card">
+                <h3>便民服务</h3>
+                <ul>
+                    <li>门诊大厅设有导诊台，可提供咨询与轮椅借用服务</li>
+                    <li>自助挂号缴费机支持微信、支付宝及医保卡支付</li>
+                    <li>提供病历复印、诊断证明盖章等便民窗口</li>
+                    <li>院内设有无障碍通道与母婴室</li>
+                    <li>停车场车位有限，建议公共交通出行</li>
+                </ul>
+            </div>
+            <div class="notice-card">
+                <h3>就诊注意事项</h3>
+                <ul>
+                    <li>就诊请携带有效身份证件与既往病历资料</li>
+                    <li>部分检查项目需空腹，请遵医嘱提前准备</li>
+                    <li>医保患者请提前了解报销政策，结算时出示医保卡</li>
+                    <li>发热或呼吸道症状患者请主动告知预检分诊人员</li>
+                    <li>具体科室出诊信息以医院当日公示为准</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section class="faq-section">
+            <h2 class="section-title">常见问题解答</h2>
+            <p class="section-sub">汇总就医前高频疑问，帮助您少跑冤枉路</p>
+            <div class="faq-list">
+                <details>
+                    <summary>如何预约挂号？</summary>
+                    <p>目前推荐通过医院官方微信公众号进行线上预约，也可拨打咨询电话或前往门诊大厅自助机操作。部分专家号源紧张，建议提前1-3天预约。</p>
+                </details>
+                <details>
+                    <summary>医院具体位置在哪里？有地铁站吗？</summary>
+                    <p>医院位于广州市花都区，具体地址可在地图APP搜索“花都武警医院”。周边有公交站，部分地铁站可换乘公交直达，建议出发前使用导航规划路线。</p>
+                </details>
+                <details>
+                    <summary>体检需要提前预约吗？</summary>
+                    <p>个人健康体检一般建议提前电话咨询或线上预约，以便医院安排体检批次并告知空腹等注意事项。</p>
+                </details>
+                <details>
+                    <summary>医保卡可以直接使用吗？</summary>
+                    <p>广州市医保参保人员在正常参保状态下可按规定使用医保卡结算，异地医保请提前了解异地就医备案流程。</p>
+                </details>
+                <details>
+                    <summary>医院有急诊服务吗？</summary>
+                    <p>作为综合性医院，通常设有24小时急诊。如遇紧急情况请直接前往急诊科或拨打120求助。</p>
+                </details>
+            </div>
+        </section>
+    </div>
+</main>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <h4>关于本站</h4>
+                <p>本站为花都武警医院相关的便民信息与健康科普平台，内容仅供参考，不构成任何诊疗建议。如有就医需求，请通过正规渠道联系医院。</p>
+            </div>
+            <div>
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">门诊安排</a></li>
+                    <li><a href="#">科室电话</a></li>
+                    <li><a href="#">来院路线</a></li>
+                    <li><a href="#">住院指南</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>就医提示</h4>
+                <ul>
+                    <li>就诊请携带有效证件</li>
+                    <li>提前预约，错峰就诊</li>
+                    <li>关注天气变化</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 花都武警医院信息服务 · 本平台不隶属于任何医疗机构，仅供参考</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
